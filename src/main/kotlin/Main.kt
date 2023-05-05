@@ -2,6 +2,7 @@ fun main() {
   println(  personaDetails("Stephanie", 20, "Kenya"))
     println(stringLength("Software Developer"))
     massage("Stephanie")
+    println(replaceVowel("Beautiful Lady"))
 
 
 
@@ -34,7 +35,21 @@ fun massage(name: String){
 }
 //Write a Kotlin function that takes in a string will all the vowels replaces by the character ‘*’.
 // Use string interpolation to generate the output.
-fun replaceVowel (word:String):String{
-    var vowels = arrayOf("a","e","i","o","u","A","E","I","O","U")
-    var replacedWord =
+fun replaceVowel (word:String): String {
+    var vowel = "AEIOUaeiou"
+    var answer = ""
+
+    for (w in word) {
+        if (w in vowel) {
+            answer += "*"
+        } else {
+            answer += w
+        }
+    }
+    return "org: $word new: $answer"
+
 }
+
+
+
+
